@@ -23,11 +23,12 @@ const features = [
 
 export function WhySection() {
   return (
-    <section className="py-20 md:py-28 bg-surface-elevated">
+    <section className="py-24 md:py-32 bg-background">
       <div className="container-wide">
         {/* Header */}
         <div className="text-center max-w-2xl mx-auto mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-4">
+          <p className="text-sm font-medium text-primary mb-3 uppercase tracking-wider">Why Choose Us</p>
+          <h2 className="text-3xl md:text-5xl font-bold tracking-tight mb-5 text-foreground">
             Learning that actually sticks
           </h2>
           <p className="text-lg text-muted-foreground">
@@ -37,16 +38,16 @@ export function WhySection() {
         </div>
 
         {/* Features */}
-        <div className="grid md:grid-cols-3 gap-8 md:gap-12">
+        <div className="grid md:grid-cols-3 gap-6 md:gap-8">
           {features.map((feature, index) => (
             <div 
               key={feature.title}
-              className={`text-center animate-fade-up stagger-${index + 1}`}
+              className={`p-8 rounded-2xl bg-accent/50 border border-border/50 hover:border-primary/20 transition-all animate-fade-up stagger-${index + 1}`}
             >
-              <div className="inline-flex items-center justify-center w-14 h-14 rounded-xl bg-primary/10 text-primary mb-6">
-                <feature.icon className="w-7 h-7" />
+              <div className="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-primary text-primary-foreground mb-6">
+                <feature.icon className="w-6 h-6" />
               </div>
-              <h3 className="text-xl font-semibold mb-3">{feature.title}</h3>
+              <h3 className="text-xl font-semibold mb-3 text-foreground">{feature.title}</h3>
               <p className="text-muted-foreground leading-relaxed">
                 {feature.description}
               </p>

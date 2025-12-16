@@ -147,10 +147,10 @@ const WhyUs = () => {
           <p className="text-lg text-muted-foreground max-w-xl mx-auto mb-8">
             Join one of our upcoming webinars and see practical learning in action.
           </p>
-          <Button asChild variant="hero" size="xl">
+          <Button asChild size="xl" className="rounded-full">
             <Link to="/webinars">
               Explore Webinars
-              <ArrowRight className="w-5 h-5 ml-1" />
+              <ArrowRight className="w-5 h-5 ml-2" />
             </Link>
           </Button>
         </div>
