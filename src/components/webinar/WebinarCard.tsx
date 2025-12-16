@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Calendar, Clock, Users } from "lucide-react";
+import { Calendar, Clock, Users, ArrowUpRight } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { cn } from "@/lib/utils";
 import type { Webinar } from "@/data/webinars";
@@ -10,9 +10,9 @@ interface WebinarCardProps {
 }
 
 const statusStyles = {
-  upcoming: "bg-primary/10 text-primary border-primary/20",
-  live: "bg-destructive/10 text-destructive border-destructive/20",
-  completed: "bg-muted text-muted-foreground border-border",
+  upcoming: "bg-primary/10 text-primary",
+  live: "bg-destructive/10 text-destructive",
+  completed: "bg-muted text-muted-foreground",
 };
 
 export function WebinarCard({ webinar, className }: WebinarCardProps) {
@@ -20,26 +20,27 @@ export function WebinarCard({ webinar, className }: WebinarCardProps) {
     <Link
       to={`/webinars/${webinar.id}`}
       className={cn(
-        "group block bg-card rounded-xl p-6 card-hover",
+        "group block bg-background rounded-2xl p-6 border border-border hover:border-primary/30 hover:shadow-[var(--shadow-card-hover)] transition-all",
         className
       )}
     >
       {/* Header */}
       <div className="flex items-start justify-between gap-4 mb-4">
-        <Badge variant="outline" className="text-xs font-medium">
+        <Badge variant="secondary" className="text-xs font-medium rounded-full">
           {webinar.domainLabel}
         </Badge>
         <Badge 
-          variant="outline" 
-          className={cn("text-xs font-medium capitalize", statusStyles[webinar.status])}
+          className={cn("text-xs font-medium capitalize rounded-full border-0", statusStyles[webinar.status])}
         >
+          {webinar.status === "live" && <span className="w-2 h-2 rounded-full bg-destructive mr-1.5 animate-pulse" />}
           {webinar.status}
         </Badge>
       </div>
 
       {/* Title */}
-      <h3 className="text-lg font-semibold mb-2 group-hover:text-primary transition-colors">
+      <h3 className="text-lg font-semibold mb-2 text-foreground group-hover:text-primary transition-colors flex items-start gap-2">
         {webinar.title}
+        <ArrowUpRight className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity shrink-0 mt-1" />
       </h3>
 
       {/* Description */}
@@ -58,7 +59,7 @@ export function WebinarCard({ webinar, className }: WebinarCardProps) {
           <span>{webinar.duration}</span>
         </div>
         {webinar.spotsLeft && webinar.status === "upcoming" && (
-          <div className="flex items-center gap-1.5 text-primary">
+          <div className="flex items-center gap-1.5 text-primary font-medium">
             <Users className="w-4 h-4" />
             <span>{webinar.spotsLeft} spots left</span>
           </div>
@@ -73,7 +74,7 @@ export function WebinarCard({ webinar, className }: WebinarCardProps) {
           className="w-10 h-10 rounded-full object-cover"
         />
         <div>
-          <p className="text-sm font-medium">{webinar.instructor.name}</p>
+          <p className="text-sm font-medium text-foreground">{webinar.instructor.name}</p>
           <p className="text-xs text-muted-foreground">{webinar.instructor.role}</p>
         </div>
       </div>
