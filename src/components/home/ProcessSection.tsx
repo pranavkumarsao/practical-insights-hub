@@ -29,7 +29,7 @@ export function ProcessSection() {
             How learning works here
           </h2>
           <p className="text-body">
-            A simple, proven framework that ensures you don't just learn—you transform.
+            A simple, proven framework that ensures you don't just learn. You transform.
           </p>
         </div>
 

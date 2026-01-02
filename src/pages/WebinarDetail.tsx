@@ -89,8 +89,8 @@ const WebinarDetail = () => {
                 {/* CTA */}
                 {webinar.status === "upcoming" ? (
                   <>
-                    <button className="w-full py-2.5 bg-primary text-primary-foreground text-sm font-medium rounded-lg hover:opacity-90 transition-opacity mb-3">
-                      Register — Free
+                  <button className="w-full py-2.5 bg-primary text-primary-foreground text-sm font-medium rounded-lg hover:opacity-90 transition-opacity mb-3">
+                      Register for Free
                     </button>
                     <p className="text-xs text-center text-muted-foreground">
                       {webinar.spotsLeft && `${webinar.spotsLeft} spots left`}

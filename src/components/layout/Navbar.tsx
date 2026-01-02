@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
+import logo from "@/assets/logo.svg";
 
 const navLinks = [
   { href: "/webinars", label: "Webinars" },
@@ -21,9 +22,9 @@ export function Navbar() {
           {/* Logo */}
           <Link 
             to="/" 
-            className="text-sm font-medium tracking-tight text-foreground"
+            className="flex items-center"
           >
-            The Practical World
+            <img src={logo} alt="The Practical World" className="h-8" />
           </Link>
 
           {/* Desktop Navigation */}
