@@ -12,8 +12,8 @@ const WebinarDetail = () => {
     return (
       <Layout>
         <div className="container-wide py-20 text-center">
-          <h1 className="text-xl font-medium mb-4">Webinar not found</h1>
-          <Link to="/webinars" className="text-sm text-primary hover:text-primary/80">
+          <h1 className="text-lg font-medium mb-4">Webinar not found</h1>
+          <Link to="/webinars" className="text-sm text-primary hover:opacity-80">
             ← Back to webinars
           </Link>
         </div>
@@ -43,7 +43,6 @@ const WebinarDetail = () => {
                 <span>{webinar.domainLabel}</span>
                 <span>·</span>
                 <span className={cn(
-                  "capitalize",
                   webinar.status === "upcoming" && "text-primary",
                   webinar.status === "live" && "text-destructive"
                 )}>
@@ -63,26 +62,26 @@ const WebinarDetail = () => {
 
               {/* Details */}
               <div className="flex flex-wrap items-center gap-6 mt-8 pt-8 border-t border-border text-sm animate-fade-up stagger-3">
-                <span>{webinar.date}</span>
+                <span className="text-foreground">{webinar.date}</span>
                 <span className="text-muted-foreground">·</span>
-                <span>{webinar.time}</span>
+                <span className="text-muted-foreground">{webinar.time}</span>
                 <span className="text-muted-foreground">·</span>
-                <span>{webinar.duration}</span>
+                <span className="text-muted-foreground">{webinar.duration}</span>
               </div>
             </div>
 
             {/* Sidebar */}
             <div className="lg:col-span-1">
-              <div className="sticky top-24 p-6 border border-border rounded-lg animate-fade-up stagger-4">
+              <div className="sticky top-20 p-6 bg-card border border-border rounded-lg animate-fade-up stagger-4">
                 {/* Instructor */}
                 <div className="flex items-center gap-3 mb-6 pb-6 border-b border-border">
                   <img
                     src={webinar.instructor.avatar}
                     alt={webinar.instructor.name}
-                    className="w-12 h-12 rounded-full object-cover"
+                    className="w-10 h-10 rounded-full object-cover"
                   />
                   <div>
-                    <p className="text-sm font-medium">{webinar.instructor.name}</p>
+                    <p className="text-sm font-medium text-foreground">{webinar.instructor.name}</p>
                     <p className="text-xs text-muted-foreground">{webinar.instructor.role}</p>
                   </div>
                 </div>
@@ -90,7 +89,7 @@ const WebinarDetail = () => {
                 {/* CTA */}
                 {webinar.status === "upcoming" ? (
                   <>
-                    <button className="w-full py-3 bg-primary text-primary-foreground text-sm font-medium rounded-md hover:bg-primary/90 transition-colors mb-3">
+                    <button className="w-full py-2.5 bg-primary text-primary-foreground text-sm font-medium rounded-lg hover:opacity-90 transition-opacity mb-3">
                       Register — Free
                     </button>
                     <p className="text-xs text-center text-muted-foreground">
@@ -98,11 +97,11 @@ const WebinarDetail = () => {
                     </p>
                   </>
                 ) : webinar.status === "completed" ? (
-                  <button className="w-full py-3 bg-muted text-muted-foreground text-sm font-medium rounded-md cursor-not-allowed">
+                  <button className="w-full py-2.5 bg-muted text-muted-foreground text-sm font-medium rounded-lg cursor-not-allowed">
                     Completed
                   </button>
                 ) : (
-                  <button className="w-full py-3 bg-destructive text-destructive-foreground text-sm font-medium rounded-md hover:bg-destructive/90 transition-colors">
+                  <button className="w-full py-2.5 bg-destructive text-destructive-foreground text-sm font-medium rounded-lg hover:opacity-90 transition-opacity">
                     Join Live
                   </button>
                 )}
@@ -119,7 +118,7 @@ const WebinarDetail = () => {
             <div className="lg:col-span-2 space-y-16">
               {/* Who this is for */}
               <div className="animate-fade-up">
-                <h2 className="text-lg font-medium mb-6">Who this is for</h2>
+                <h2 className="text-base font-medium mb-6 text-foreground">Who this is for</h2>
                 <ul className="space-y-3">
                   {webinar.targetAudience.map((audience) => (
                     <li key={audience} className="flex items-start gap-3 text-sm text-muted-foreground">
@@ -132,15 +131,15 @@ const WebinarDetail = () => {
 
               {/* What you'll learn */}
               <div className="animate-fade-up stagger-1">
-                <h2 className="text-lg font-medium mb-6">What you'll learn</h2>
+                <h2 className="text-base font-medium mb-6 text-foreground">What you'll learn</h2>
                 <div className="grid sm:grid-cols-2 gap-4">
                   {webinar.outcomes.map((outcome, index) => (
                     <div 
                       key={index}
-                      className="p-4 bg-surface-elevated rounded-md"
+                      className="p-4 bg-card border border-border rounded-lg"
                     >
                       <span className="text-xs text-muted-foreground mb-2 block">{String(index + 1).padStart(2, '0')}</span>
-                      <span className="text-sm">{outcome}</span>
+                      <span className="text-sm text-foreground">{outcome}</span>
                     </div>
                   ))}
                 </div>
@@ -148,7 +147,7 @@ const WebinarDetail = () => {
 
               {/* Agenda */}
               <div className="animate-fade-up stagger-2">
-                <h2 className="text-lg font-medium mb-6">Session agenda</h2>
+                <h2 className="text-base font-medium mb-6 text-foreground">Session agenda</h2>
                 <ol className="space-y-3">
                   {webinar.agenda.map((item, index) => (
                     <li key={index} className="flex items-start gap-4 text-sm">

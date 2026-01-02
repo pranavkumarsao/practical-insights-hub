@@ -50,7 +50,7 @@ const Webinars = () => {
                 className={cn(
                   "px-3 py-1.5 text-sm rounded-md transition-colors",
                   activeFilter === option.value
-                    ? "bg-foreground text-background"
+                    ? "bg-card text-foreground border border-border"
                     : "text-muted-foreground hover:text-foreground"
                 )}
               >
@@ -65,7 +65,7 @@ const Webinars = () => {
           </p>
 
           {/* Grid */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
             {filteredWebinars.map((webinar, index) => (
               <WebinarCard 
                 key={webinar.id} 

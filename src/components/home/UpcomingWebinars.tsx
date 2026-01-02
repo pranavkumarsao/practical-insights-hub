@@ -31,10 +31,10 @@ export function UpcomingWebinars() {
             <Link
               key={webinar.id}
               to={`/webinars/${webinar.id}`}
-              className={`bg-background p-6 md:p-8 group animate-fade-up stagger-${index + 1}`}
+              className={`bg-background p-6 md:p-8 group hover:bg-card transition-colors animate-fade-up stagger-${index + 1}`}
             >
               {/* Domain */}
-              <p className="text-xs text-muted-foreground uppercase tracking-wide mb-4">
+              <p className="text-xs text-muted-foreground uppercase tracking-wider mb-4">
                 {webinar.domainLabel}
               </p>
 
