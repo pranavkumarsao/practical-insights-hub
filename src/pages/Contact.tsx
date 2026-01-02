@@ -1,7 +1,6 @@
 import { useState } from "react";
-import { Mail, MessageSquare, HelpCircle, ChevronDown } from "lucide-react";
+import { ChevronDown } from "lucide-react";
 import { Layout } from "@/components/layout/Layout";
-import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
@@ -11,23 +10,19 @@ import { cn } from "@/lib/utils";
 const faqs = [
   {
     question: "Are webinars free?",
-    answer: "Yes, all our live webinars are currently free to attend. We believe in demonstrating value before asking for anything in return.",
+    answer: "Yes, all our live webinars are currently free. We believe in demonstrating value before asking for anything in return.",
   },
   {
     question: "Will sessions be recorded?",
-    answer: "Yes, registered participants will receive access to the recording after the session. However, we encourage live attendance for the interactive Q&A.",
+    answer: "Yes, registered participants receive access to the recording. However, we encourage live attendance for the interactive Q&A.",
   },
   {
     question: "What if I can't attend live?",
-    answer: "You can still register and you'll receive the recording. Some interactive elements work best live, but the core content will be available.",
-  },
-  {
-    question: "How do I prepare for a webinar?",
-    answer: "Each webinar page lists prerequisites if any. Generally, come with an open mind and be ready to take notes. Some sessions have pre-work that's optional but recommended.",
+    answer: "You can still register and receive the recording. Some interactive elements work best live, but the core content will be available.",
   },
   {
     question: "When will the full platform launch?",
-    answer: "We're planning to launch our learning platform beta in Q2 2025. Sign up for our newsletter or attend a webinar to stay updated.",
+    answer: "We're planning to launch our learning platform beta in Q2 2025. Attend a webinar to stay updated.",
   },
 ];
 
@@ -40,11 +35,10 @@ const Contact = () => {
     e.preventDefault();
     setIsSubmitting(true);
     
-    // Simulate form submission
     await new Promise(resolve => setTimeout(resolve, 1000));
     
     toast({
-      title: "Message sent!",
+      title: "Message sent",
       description: "We'll get back to you within 24-48 hours.",
     });
     
@@ -55,72 +49,70 @@ const Contact = () => {
   return (
     <Layout>
       {/* Header */}
-      <section className="py-16 md:py-24 bg-surface-elevated">
+      <section className="py-16 md:py-24">
         <div className="container-wide">
-          <div className="max-w-2xl">
-            <h1 className="text-4xl md:text-5xl font-bold tracking-tight mb-4 animate-fade-up">
-              Get in touch
+          <div className="max-w-xl">
+            <h1 className="heading-display mb-4 animate-fade-up">
+              Contact
             </h1>
-            <p className="text-lg text-muted-foreground animate-fade-up stagger-1">
-              Have a question or feedback? We'd love to hear from you.
+            <p className="text-body-large animate-fade-up stagger-1">
+              Have a question? We'd love to hear from you.
             </p>
           </div>
         </div>
       </section>
 
       {/* Contact & FAQ */}
-      <section className="py-12 md:py-20">
+      <section className="pb-20 md:pb-28">
         <div className="container-wide">
-          <div className="grid lg:grid-cols-2 gap-12 lg:gap-20">
+          <div className="grid lg:grid-cols-2 gap-16 lg:gap-20">
             {/* Contact Form */}
             <div className="animate-fade-up">
-              <div className="flex items-center gap-3 mb-6">
-                <div className="w-10 h-10 rounded-lg bg-primary/10 text-primary flex items-center justify-center">
-                  <Mail className="w-5 h-5" />
-                </div>
-                <h2 className="text-2xl font-bold">Send us a message</h2>
-              </div>
+              <h2 className="text-lg font-medium mb-6">Send a message</h2>
               
-              <form onSubmit={handleSubmit} className="space-y-6">
+              <form onSubmit={handleSubmit} className="space-y-5">
                 <div className="grid sm:grid-cols-2 gap-4">
                   <div className="space-y-2">
-                    <Label htmlFor="name">Name</Label>
-                    <Input id="name" required placeholder="Your name" />
+                    <Label htmlFor="name" className="text-sm">Name</Label>
+                    <Input id="name" required placeholder="Your name" className="h-11" />
                   </div>
                   <div className="space-y-2">
-                    <Label htmlFor="email">Email</Label>
-                    <Input id="email" type="email" required placeholder="you@example.com" />
+                    <Label htmlFor="email" className="text-sm">Email</Label>
+                    <Input id="email" type="email" required placeholder="you@example.com" className="h-11" />
                   </div>
                 </div>
                 
                 <div className="space-y-2">
-                  <Label htmlFor="subject">Subject</Label>
-                  <Input id="subject" required placeholder="What's this about?" />
+                  <Label htmlFor="subject" className="text-sm">Subject</Label>
+                  <Input id="subject" required placeholder="What's this about?" className="h-11" />
                 </div>
                 
                 <div className="space-y-2">
-                  <Label htmlFor="message">Message</Label>
+                  <Label htmlFor="message" className="text-sm">Message</Label>
                   <Textarea 
                     id="message" 
                     required 
                     placeholder="Tell us more..."
-                    className="min-h-[150px] resize-none"
+                    className="min-h-[120px] resize-none"
                   />
                 </div>
                 
-                <Button type="submit" size="lg" disabled={isSubmitting}>
+                <button 
+                  type="submit" 
+                  disabled={isSubmitting}
+                  className="px-5 py-2.5 bg-primary text-primary-foreground text-sm font-medium rounded-md hover:bg-primary/90 transition-colors disabled:opacity-50"
+                >
                   {isSubmitting ? "Sending..." : "Send Message"}
-                </Button>
+                </button>
               </form>
 
-              {/* Contact info */}
-              <div className="mt-12 pt-8 border-t border-border">
-                <p className="text-sm text-muted-foreground mb-4">
-                  Prefer email? Reach us directly at
+              <div className="mt-10 pt-8 border-t border-border">
+                <p className="text-sm text-muted-foreground mb-2">
+                  Prefer email?
                 </p>
                 <a 
                   href="mailto:hello@thepracticalworld.com"
-                  className="text-primary hover:underline font-medium"
+                  className="text-sm text-primary hover:text-primary/80 transition-colors"
                 >
                   hello@thepracticalworld.com
                 </a>
@@ -129,48 +121,33 @@ const Contact = () => {
 
             {/* FAQ */}
             <div className="animate-fade-up stagger-2">
-              <div className="flex items-center gap-3 mb-6">
-                <div className="w-10 h-10 rounded-lg bg-primary/10 text-primary flex items-center justify-center">
-                  <HelpCircle className="w-5 h-5" />
-                </div>
-                <h2 className="text-2xl font-bold">Frequently asked</h2>
-              </div>
+              <h2 className="text-lg font-medium mb-6">Frequently asked</h2>
 
-              <div className="space-y-3">
+              <div className="space-y-2">
                 {faqs.map((faq, index) => (
                   <div 
                     key={index}
-                    className="border border-border rounded-lg overflow-hidden"
+                    className="border border-border rounded-md overflow-hidden"
                   >
                     <button
                       onClick={() => setOpenFaq(openFaq === index ? null : index)}
                       className="w-full flex items-center justify-between p-4 text-left hover:bg-muted/50 transition-colors"
                     >
-                      <span className="font-medium pr-4">{faq.question}</span>
+                      <span className="text-sm font-medium pr-4">{faq.question}</span>
                       <ChevronDown className={cn(
-                        "w-5 h-5 text-muted-foreground transition-transform flex-shrink-0",
+                        "w-4 h-4 text-muted-foreground transition-transform flex-shrink-0",
                         openFaq === index && "rotate-180"
                       )} />
                     </button>
                     {openFaq === index && (
                       <div className="px-4 pb-4">
-                        <p className="text-muted-foreground text-sm leading-relaxed">
+                        <p className="text-sm text-muted-foreground leading-relaxed">
                           {faq.answer}
                         </p>
                       </div>
                     )}
                   </div>
                 ))}
-              </div>
-
-              {/* Additional help */}
-              <div className="mt-8 p-6 rounded-xl bg-surface-elevated">
-                <MessageSquare className="w-8 h-8 text-primary mb-4" />
-                <h3 className="font-semibold mb-2">Still have questions?</h3>
-                <p className="text-sm text-muted-foreground">
-                  Can't find what you're looking for? Send us a message and we'll 
-                  get back to you within 24-48 hours.
-                </p>
               </div>
             </div>
           </div>

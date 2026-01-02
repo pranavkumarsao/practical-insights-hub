@@ -10,36 +10,32 @@ const footerLinks = {
     { href: "/contact", label: "Contact" },
     { href: "/contact", label: "FAQ" },
   ],
-  legal: [
-    { href: "#", label: "Privacy Policy" },
-    { href: "#", label: "Terms of Service" },
-  ],
 };
 
 export function Footer() {
   return (
-    <footer className="bg-background border-t border-border">
+    <footer className="border-t border-border">
       <div className="container-wide py-16 md:py-20">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-12">
           {/* Brand */}
-          <div className="col-span-2 md:col-span-1">
-            <Link to="/" className="text-xl font-bold text-foreground">
+          <div className="col-span-2">
+            <Link to="/" className="text-base font-semibold">
               The Practical World
             </Link>
-            <p className="mt-4 text-sm text-muted-foreground max-w-xs">
+            <p className="mt-4 text-sm text-muted-foreground max-w-xs leading-relaxed">
               Real-world learning with practical implementation and measurable outcomes.
             </p>
           </div>
 
           {/* Product Links */}
           <div>
-            <h4 className="text-sm font-semibold text-foreground mb-4">Product</h4>
+            <h4 className="text-sm font-medium mb-4">Product</h4>
             <ul className="space-y-3">
               {footerLinks.product.map((link) => (
                 <li key={link.label}>
                   <Link
                     to={link.href}
-                    className="text-sm text-muted-foreground hover:text-primary transition-colors"
+                    className="text-sm text-muted-foreground hover:text-foreground transition-colors"
                   >
                     {link.label}
                   </Link>
@@ -50,30 +46,13 @@ export function Footer() {
 
           {/* Support Links */}
           <div>
-            <h4 className="text-sm font-semibold text-foreground mb-4">Support</h4>
+            <h4 className="text-sm font-medium mb-4">Support</h4>
             <ul className="space-y-3">
               {footerLinks.support.map((link) => (
                 <li key={link.label}>
                   <Link
                     to={link.href}
-                    className="text-sm text-muted-foreground hover:text-primary transition-colors"
-                  >
-                    {link.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Legal Links */}
-          <div>
-            <h4 className="text-sm font-semibold text-foreground mb-4">Legal</h4>
-            <ul className="space-y-3">
-              {footerLinks.legal.map((link) => (
-                <li key={link.label}>
-                  <Link
-                    to={link.href}
-                    className="text-sm text-muted-foreground hover:text-primary transition-colors"
+                    className="text-sm text-muted-foreground hover:text-foreground transition-colors"
                   >
                     {link.label}
                   </Link>
@@ -85,29 +64,9 @@ export function Footer() {
 
         {/* Bottom Bar */}
         <div className="mt-16 pt-8 border-t border-border">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <p className="text-sm text-muted-foreground">
-              © {new Date().getFullYear()} The Practical World. All rights reserved.
-            </p>
-            <div className="flex items-center gap-6">
-              <a
-                href="https://twitter.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-sm text-muted-foreground hover:text-primary transition-colors"
-              >
-                Twitter
-              </a>
-              <a
-                href="https://linkedin.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-sm text-muted-foreground hover:text-primary transition-colors"
-              >
-                LinkedIn
-              </a>
-            </div>
-          </div>
+          <p className="text-sm text-muted-foreground">
+            © {new Date().getFullYear()} The Practical World
+          </p>
         </div>
       </div>
     </footer>
