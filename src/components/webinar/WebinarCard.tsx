@@ -12,18 +12,18 @@ export function WebinarCard({ webinar, className }: WebinarCardProps) {
     <Link
       to={`/webinars/${webinar.id}`}
       className={cn(
-        "group block p-6 border border-border rounded-lg hover:border-foreground/20 transition-colors",
+        "group block p-6 bg-card border border-border rounded-lg hover:border-primary/30 transition-colors",
         className
       )}
     >
       {/* Header */}
       <div className="flex items-start justify-between gap-4 mb-4">
-        <span className="text-xs text-muted-foreground uppercase tracking-wide">
+        <span className="text-xs text-muted-foreground uppercase tracking-wider">
           {webinar.domainLabel}
         </span>
         <span 
           className={cn(
-            "text-xs capitalize",
+            "text-xs",
             webinar.status === "upcoming" && "text-primary",
             webinar.status === "live" && "text-destructive",
             webinar.status === "completed" && "text-muted-foreground"
@@ -58,7 +58,7 @@ export function WebinarCard({ webinar, className }: WebinarCardProps) {
           className="w-8 h-8 rounded-full object-cover"
         />
         <div>
-          <p className="text-sm font-medium">{webinar.instructor.name}</p>
+          <p className="text-sm font-medium text-foreground">{webinar.instructor.name}</p>
           <p className="text-xs text-muted-foreground">{webinar.instructor.role}</p>
         </div>
       </div>

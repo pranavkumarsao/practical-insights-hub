@@ -15,13 +15,13 @@ export function Navbar() {
   const location = useLocation();
 
   return (
-    <header className="sticky top-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
+    <header className="sticky top-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
       <nav className="container-wide">
-        <div className="flex items-center justify-between h-16">
+        <div className="flex items-center justify-between h-14">
           {/* Logo */}
           <Link 
             to="/" 
-            className="text-base font-semibold tracking-tight"
+            className="text-sm font-medium tracking-tight text-foreground"
           >
             The Practical World
           </Link>
@@ -48,7 +48,7 @@ export function Navbar() {
           <div className="hidden md:block">
             <Link 
               to="/webinars"
-              className="text-sm font-medium text-primary hover:text-primary/80 transition-colors"
+              className="text-sm text-primary hover:opacity-80 transition-opacity"
             >
               Explore Webinars →
             </Link>
@@ -57,7 +57,7 @@ export function Navbar() {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden p-2 -mr-2"
+            className="md:hidden p-2 -mr-2 text-muted-foreground hover:text-foreground transition-colors"
             aria-label="Toggle menu"
           >
             {isOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
@@ -87,7 +87,7 @@ export function Navbar() {
             <Link 
               to="/webinars" 
               onClick={() => setIsOpen(false)}
-              className="block py-2 text-sm font-medium text-primary"
+              className="block py-2 text-sm text-primary"
             >
               Explore Webinars →
             </Link>

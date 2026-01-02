@@ -68,39 +68,55 @@ const Contact = () => {
           <div className="grid lg:grid-cols-2 gap-16 lg:gap-20">
             {/* Contact Form */}
             <div className="animate-fade-up">
-              <h2 className="text-lg font-medium mb-6">Send a message</h2>
+              <h2 className="text-base font-medium mb-6 text-foreground">Send a message</h2>
               
               <form onSubmit={handleSubmit} className="space-y-5">
                 <div className="grid sm:grid-cols-2 gap-4">
                   <div className="space-y-2">
-                    <Label htmlFor="name" className="text-sm">Name</Label>
-                    <Input id="name" required placeholder="Your name" className="h-11" />
+                    <Label htmlFor="name" className="text-sm text-muted-foreground">Name</Label>
+                    <Input 
+                      id="name" 
+                      required 
+                      placeholder="Your name" 
+                      className="h-10 bg-card border-border focus:border-primary/50 transition-colors" 
+                    />
                   </div>
                   <div className="space-y-2">
-                    <Label htmlFor="email" className="text-sm">Email</Label>
-                    <Input id="email" type="email" required placeholder="you@example.com" className="h-11" />
+                    <Label htmlFor="email" className="text-sm text-muted-foreground">Email</Label>
+                    <Input 
+                      id="email" 
+                      type="email" 
+                      required 
+                      placeholder="you@example.com" 
+                      className="h-10 bg-card border-border focus:border-primary/50 transition-colors" 
+                    />
                   </div>
                 </div>
                 
                 <div className="space-y-2">
-                  <Label htmlFor="subject" className="text-sm">Subject</Label>
-                  <Input id="subject" required placeholder="What's this about?" className="h-11" />
+                  <Label htmlFor="subject" className="text-sm text-muted-foreground">Subject</Label>
+                  <Input 
+                    id="subject" 
+                    required 
+                    placeholder="What's this about?" 
+                    className="h-10 bg-card border-border focus:border-primary/50 transition-colors" 
+                  />
                 </div>
                 
                 <div className="space-y-2">
-                  <Label htmlFor="message" className="text-sm">Message</Label>
+                  <Label htmlFor="message" className="text-sm text-muted-foreground">Message</Label>
                   <Textarea 
                     id="message" 
                     required 
                     placeholder="Tell us more..."
-                    className="min-h-[120px] resize-none"
+                    className="min-h-[120px] resize-none bg-card border-border focus:border-primary/50 transition-colors"
                   />
                 </div>
                 
                 <button 
                   type="submit" 
                   disabled={isSubmitting}
-                  className="px-5 py-2.5 bg-primary text-primary-foreground text-sm font-medium rounded-md hover:bg-primary/90 transition-colors disabled:opacity-50"
+                  className="px-5 py-2.5 bg-primary text-primary-foreground text-sm font-medium rounded-lg hover:opacity-90 transition-opacity disabled:opacity-50"
                 >
                   {isSubmitting ? "Sending..." : "Send Message"}
                 </button>
@@ -112,7 +128,7 @@ const Contact = () => {
                 </p>
                 <a 
                   href="mailto:hello@thepracticalworld.com"
-                  className="text-sm text-primary hover:text-primary/80 transition-colors"
+                  className="text-sm text-primary hover:opacity-80 transition-opacity"
                 >
                   hello@thepracticalworld.com
                 </a>
@@ -121,19 +137,19 @@ const Contact = () => {
 
             {/* FAQ */}
             <div className="animate-fade-up stagger-2">
-              <h2 className="text-lg font-medium mb-6">Frequently asked</h2>
+              <h2 className="text-base font-medium mb-6 text-foreground">Frequently asked</h2>
 
               <div className="space-y-2">
                 {faqs.map((faq, index) => (
                   <div 
                     key={index}
-                    className="border border-border rounded-md overflow-hidden"
+                    className="bg-card border border-border rounded-lg overflow-hidden"
                   >
                     <button
                       onClick={() => setOpenFaq(openFaq === index ? null : index)}
                       className="w-full flex items-center justify-between p-4 text-left hover:bg-muted/50 transition-colors"
                     >
-                      <span className="text-sm font-medium pr-4">{faq.question}</span>
+                      <span className="text-sm font-medium text-foreground pr-4">{faq.question}</span>
                       <ChevronDown className={cn(
                         "w-4 h-4 text-muted-foreground transition-transform flex-shrink-0",
                         openFaq === index && "rotate-180"

@@ -12,7 +12,7 @@ export function PlatformPreview() {
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20">
           {/* Content */}
           <div className="max-w-md">
-            <p className="text-xs text-muted-foreground uppercase tracking-wide mb-4">
+            <p className="text-xs text-muted-foreground uppercase tracking-wider mb-4">
               Coming Soon
             </p>
             <h2 className="heading-section mb-6">
@@ -38,7 +38,7 @@ export function PlatformPreview() {
 
           {/* Visual placeholder */}
           <div className="flex items-center justify-center">
-            <div className="w-full aspect-[4/3] bg-surface-elevated rounded-lg border border-border flex items-center justify-center">
+            <div className="w-full aspect-[4/3] bg-card rounded-lg border border-border flex items-center justify-center">
               <p className="text-sm text-muted-foreground">
                 Preview coming soon
               </p>

@@ -38,7 +38,7 @@ export function WhySection() {
               key={feature.title}
               className={`animate-fade-up stagger-${index + 1}`}
             >
-              <h3 className="text-base font-medium mb-3">{feature.title}</h3>
+              <h3 className="text-base font-medium mb-3 text-foreground">{feature.title}</h3>
               <p className="text-sm text-muted-foreground leading-relaxed">
                 {feature.description}
               </p>

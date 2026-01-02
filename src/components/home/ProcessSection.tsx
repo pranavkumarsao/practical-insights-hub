@@ -21,7 +21,7 @@ const steps = [
 
 export function ProcessSection() {
   return (
-    <section className="py-20 md:py-28 bg-surface-elevated">
+    <section className="py-20 md:py-28 bg-card">
       <div className="container-wide">
         {/* Header */}
         <div className="max-w-xl mb-16">
@@ -46,7 +46,7 @@ export function ProcessSection() {
               </span>
               
               {/* Content */}
-              <h3 className="text-base font-medium mb-3">{step.title}</h3>
+              <h3 className="text-base font-medium mb-3 text-foreground">{step.title}</h3>
               <p className="text-sm text-muted-foreground leading-relaxed">
                 {step.description}
               </p>

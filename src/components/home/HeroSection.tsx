@@ -10,7 +10,7 @@ export function HeroSection() {
             A different approach to learning
           </p>
 
-          {/* Headline */}
+          {/* Headline - no bold, uses font-medium */}
           <h1 className="heading-display mb-8 animate-fade-up stagger-1">
             Real-world skills.{" "}
             <span className="text-muted-foreground">Practical outcomes.</span>
@@ -26,7 +26,7 @@ export function HeroSection() {
           <div className="animate-fade-up stagger-3">
             <Link 
               to="/webinars"
-              className="inline-flex items-center text-sm font-medium text-primary hover:text-primary/80 transition-colors"
+              className="inline-flex items-center text-sm text-primary hover:opacity-80 transition-opacity"
             >
               Explore upcoming webinars →
             </Link>

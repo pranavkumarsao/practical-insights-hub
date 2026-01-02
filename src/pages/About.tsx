@@ -61,17 +61,17 @@ const About = () => {
               </div>
             </div>
 
-            <div className="space-y-6 animate-fade-up stagger-2">
-              <div className="p-6 border border-border rounded-lg">
-                <h3 className="text-base font-medium mb-2">Vision</h3>
-                <p className="text-sm text-muted-foreground">
+            <div className="space-y-4 animate-fade-up stagger-2">
+              <div className="p-6 bg-card border border-border rounded-lg">
+                <h3 className="text-base font-medium mb-2 text-foreground">Vision</h3>
+                <p className="text-sm text-muted-foreground leading-relaxed">
                   A world where learning is synonymous with doing—where every hour invested 
                   translates directly to professional capability.
                 </p>
               </div>
-              <div className="p-6 border border-border rounded-lg">
-                <h3 className="text-base font-medium mb-2">Community</h3>
-                <p className="text-sm text-muted-foreground">
+              <div className="p-6 bg-card border border-border rounded-lg">
+                <h3 className="text-base font-medium mb-2 text-foreground">Community</h3>
+                <p className="text-sm text-muted-foreground leading-relaxed">
                   We're building a community of practitioners who learn by doing, share 
                   what works, and help each other grow.
                 </p>
@@ -82,7 +82,7 @@ const About = () => {
       </section>
 
       {/* Story */}
-      <section className="py-16 md:py-20 bg-surface-elevated">
+      <section className="py-16 md:py-20 bg-card">
         <div className="container-wide">
           <div className="max-w-2xl mx-auto">
             <h2 className="heading-section mb-8 text-center">
@@ -134,7 +134,7 @@ const About = () => {
                   <span className={`text-xs ${milestone.active ? 'text-primary' : 'text-muted-foreground'}`}>
                     {milestone.phase}
                   </span>
-                  <h3 className="text-base font-medium mt-1 mb-2">{milestone.title}</h3>
+                  <h3 className="text-base font-medium mt-1 mb-2 text-foreground">{milestone.title}</h3>
                   <p className="text-sm text-muted-foreground">{milestone.description}</p>
                 </div>
               ))}
@@ -155,7 +155,7 @@ const About = () => {
           </p>
           <Link 
             to="/webinars"
-            className="inline-flex items-center justify-center px-6 py-3 bg-primary text-primary-foreground text-sm font-medium rounded-md hover:bg-primary/90 transition-colors"
+            className="inline-flex items-center justify-center px-5 py-2.5 bg-primary text-primary-foreground text-sm font-medium rounded-lg hover:opacity-90 transition-opacity"
           >
             Explore Webinars
           </Link>
