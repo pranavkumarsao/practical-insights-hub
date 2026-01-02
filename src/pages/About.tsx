@@ -33,7 +33,7 @@ const About = () => {
               About
             </h1>
             <p className="text-body-large animate-fade-up stagger-1">
-              We're building the learning platform we wished existed—one that focuses on 
+              We're building the learning platform we wished existed. One that focuses on 
               practical skills that create real outcomes.
             </p>
           </div>
@@ -65,7 +65,7 @@ const About = () => {
               <div className="p-6 bg-card border border-border rounded-lg">
                 <h3 className="text-base font-medium mb-2 text-foreground">Vision</h3>
                 <p className="text-sm text-muted-foreground leading-relaxed">
-                  A world where learning is synonymous with doing—where every hour invested 
+                  A world where learning is synonymous with doing. Where every hour invested 
                   translates directly to professional capability.
                 </p>
               </div>

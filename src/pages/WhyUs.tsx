@@ -61,7 +61,7 @@ const WhyUs = () => {
             </h1>
             <p className="text-lg md:text-xl text-muted-foreground leading-relaxed animate-fade-up stagger-1">
               We're not another ed-tech platform with hours of video content you'll never finish. 
-              We're building something different—learning that's actually useful.
+              We're building something different. Learning that's actually useful.
             </p>
           </div>
         </div>

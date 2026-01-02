@@ -27,7 +27,7 @@ export function WhySection() {
           </h2>
           <p className="text-body">
             We're building a different kind of learning platform. One where you don't just 
-            consume content—you build real skills.
+            consume content. You build real skills.
           </p>
         </div>
 
