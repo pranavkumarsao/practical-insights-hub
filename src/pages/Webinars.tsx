@@ -42,16 +42,16 @@ const Webinars = () => {
       <section className="pb-20 md:pb-28">
         <div className="container-wide">
           {/* Filters */}
-          <div className="flex flex-wrap gap-2 mb-8 pb-8 border-b border-border animate-fade-up stagger-2">
+          <div className="flex flex-wrap gap-2 mb-8 pb-8 border-b border-[hsl(var(--glass-border))] animate-fade-up stagger-2">
             {filterOptions.map((option) => (
               <button
                 key={option.value}
                 onClick={() => setActiveFilter(option.value)}
                 className={cn(
-                  "px-3 py-1.5 text-sm rounded-md transition-colors",
+                  "px-4 py-2 text-sm rounded-lg transition-all",
                   activeFilter === option.value
-                    ? "bg-card text-foreground border border-border"
-                    : "text-muted-foreground hover:text-foreground"
+                    ? "glass-card text-foreground"
+                    : "text-muted-foreground hover:text-foreground hover:bg-[hsl(var(--glass-bg))]"
                 )}
               >
                 {option.label}

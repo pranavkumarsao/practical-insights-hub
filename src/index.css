@@ -36,13 +36,18 @@
     --input: 0 0% 100% / 0.06;
     --ring: 227 100% 65%;
 
-    --radius: 0.5rem;
+    --radius: 0.75rem;
 
     /* Semantic tokens */
     --surface-elevated: 223 16% 12%;
     --text-primary: 0 0% 93%;
     --text-secondary: 225 7% 73%;
     --text-tertiary: 225 7% 55%;
+
+    /* Glassmorphism tokens */
+    --glass-bg: 0 0% 100% / 0.03;
+    --glass-border: 0 0% 100% / 0.08;
+    --glass-blur: 16px;
   }
 }
 
@@ -98,6 +103,31 @@
   /* Subtle link hover */
   .link-subtle {
     @apply text-primary transition-opacity hover:opacity-80;
+  }
+
+  /* Glassmorphism card */
+  .glass-card {
+    @apply bg-[hsl(var(--glass-bg))] backdrop-blur-xl border border-[hsl(var(--glass-border))] rounded-xl;
+  }
+
+  /* Glassmorphism surface */
+  .glass-surface {
+    @apply bg-[hsl(var(--glass-bg))] backdrop-blur-md;
+  }
+
+  /* Primary CTA button */
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 px-6 py-3 bg-primary text-primary-foreground text-sm font-medium rounded-lg transition-all duration-200 hover:opacity-90 hover:shadow-[0_0_20px_hsl(var(--primary)/0.3)];
+  }
+
+  /* Secondary/Ghost CTA button */
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 px-6 py-3 bg-[hsl(var(--glass-bg))] backdrop-blur-md border border-[hsl(var(--glass-border))] text-foreground text-sm font-medium rounded-lg transition-all duration-200 hover:bg-[hsl(0_0%_100%/0.06)] hover:border-[hsl(0_0%_100%/0.12)];
+  }
+
+  /* Link CTA */
+  .btn-link {
+    @apply inline-flex items-center gap-1.5 text-sm text-primary transition-opacity hover:opacity-80;
   }
 }
 

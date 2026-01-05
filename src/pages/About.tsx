@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { Layout } from "@/components/layout/Layout";
+import { ArrowRight, Lightbulb, Users } from "lucide-react";
 
 const milestones = [
   {
@@ -41,7 +42,7 @@ const About = () => {
       </section>
 
       {/* Mission */}
-      <section className="py-16 md:py-20 border-t border-border">
+      <section className="py-16 md:py-20 border-t border-[hsl(var(--glass-border))]">
         <div className="container-wide">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-20">
             <div className="animate-fade-up">
@@ -62,14 +63,20 @@ const About = () => {
             </div>
 
             <div className="space-y-4 animate-fade-up stagger-2">
-              <div className="p-6 bg-card border border-border rounded-lg">
+              <div className="glass-card p-6">
+                <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center mb-4">
+                  <Lightbulb className="w-5 h-5 text-primary" />
+                </div>
                 <h3 className="text-base font-medium mb-2 text-foreground">Vision</h3>
                 <p className="text-sm text-muted-foreground leading-relaxed">
                   A world where learning is synonymous with doing. Where every hour invested 
                   translates directly to professional capability.
                 </p>
               </div>
-              <div className="p-6 bg-card border border-border rounded-lg">
+              <div className="glass-card p-6">
+                <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center mb-4">
+                  <Users className="w-5 h-5 text-primary" />
+                </div>
                 <h3 className="text-base font-medium mb-2 text-foreground">Community</h3>
                 <p className="text-sm text-muted-foreground leading-relaxed">
                   We're building a community of practitioners who learn by doing, share 
@@ -82,7 +89,7 @@ const About = () => {
       </section>
 
       {/* Story */}
-      <section className="py-16 md:py-20 bg-card">
+      <section className="py-16 md:py-20 glass-surface">
         <div className="container-wide">
           <div className="max-w-2xl mx-auto">
             <h2 className="heading-section mb-8 text-center">
@@ -113,7 +120,7 @@ const About = () => {
       </section>
 
       {/* Roadmap */}
-      <section className="py-16 md:py-20 border-t border-border">
+      <section className="py-16 md:py-20 border-t border-[hsl(var(--glass-border))]">
         <div className="container-wide">
           <div className="max-w-xl mb-12">
             <h2 className="heading-section mb-4">
@@ -125,11 +132,11 @@ const About = () => {
           </div>
 
           <div className="max-w-xl">
-            <div className="space-y-8">
+            <div className="space-y-4">
               {milestones.map((milestone, index) => (
                 <div 
                   key={milestone.phase}
-                  className={`relative pl-6 border-l-2 ${milestone.active ? 'border-primary' : 'border-border'} animate-fade-up stagger-${Math.min(index + 1, 3)}`}
+                  className={`glass-card p-6 border-l-2 ${milestone.active ? 'border-l-primary' : 'border-l-transparent'} animate-fade-up stagger-${Math.min(index + 1, 3)}`}
                 >
                   <span className={`text-xs ${milestone.active ? 'text-primary' : 'text-muted-foreground'}`}>
                     {milestone.phase}
@@ -144,7 +151,7 @@ const About = () => {
       </section>
 
       {/* CTA */}
-      <section className="py-16 md:py-20 border-t border-border">
+      <section className="py-16 md:py-20 border-t border-[hsl(var(--glass-border))]">
         <div className="container-tight text-center">
           <h2 className="heading-section mb-4">
             Join us from the beginning
@@ -155,9 +162,10 @@ const About = () => {
           </p>
           <Link 
             to="/webinars"
-            className="inline-flex items-center justify-center px-5 py-2.5 bg-primary text-primary-foreground text-sm font-medium rounded-lg hover:opacity-90 transition-opacity"
+            className="btn-primary"
           >
             Explore Webinars
+            <ArrowRight className="w-4 h-4" />
           </Link>
         </div>
       </section>

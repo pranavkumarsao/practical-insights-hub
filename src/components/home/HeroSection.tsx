@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { ArrowRight } from "lucide-react";
 
 export function HeroSection() {
   return (
@@ -18,17 +19,24 @@ export function HeroSection() {
 
           {/* Subheadline */}
           <p className="text-body-large max-w-xl mb-10 animate-fade-up stagger-2">
-            We teach what actually matters—skills you can implement today, 
+            We teach what actually matters: skills you can implement today, 
             with outcomes you can measure tomorrow.
           </p>
 
-          {/* CTA */}
-          <div className="animate-fade-up stagger-3">
+          {/* CTAs */}
+          <div className="flex flex-wrap gap-4 animate-fade-up stagger-3">
             <Link 
               to="/webinars"
-              className="inline-flex items-center text-sm text-primary hover:opacity-80 transition-opacity"
+              className="btn-primary"
             >
-              Explore upcoming webinars →
+              Explore Webinars
+              <ArrowRight className="w-4 h-4" />
+            </Link>
+            <Link 
+              to="/why-us"
+              className="btn-secondary"
+            >
+              Why The Practical World
             </Link>
           </div>
         </div>

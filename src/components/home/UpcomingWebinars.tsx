@@ -1,11 +1,12 @@
 import { Link } from "react-router-dom";
+import { ArrowRight, Calendar, Users } from "lucide-react";
 import { webinars } from "@/data/webinars";
 
 export function UpcomingWebinars() {
   const upcomingWebinars = webinars.filter((w) => w.status === "upcoming").slice(0, 3);
 
   return (
-    <section className="py-20 md:py-28 border-t border-border">
+    <section className="py-20 md:py-28 border-t border-[hsl(var(--glass-border))]">
       <div className="container-wide">
         {/* Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-12">
@@ -19,22 +20,23 @@ export function UpcomingWebinars() {
           </div>
           <Link 
             to="/webinars"
-            className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+            className="btn-link"
           >
-            View all →
+            View all
+            <ArrowRight className="w-4 h-4" />
           </Link>
         </div>
 
         {/* Grid */}
-        <div className="grid md:grid-cols-3 gap-px bg-border rounded-lg overflow-hidden">
+        <div className="grid md:grid-cols-3 gap-4">
           {upcomingWebinars.map((webinar, index) => (
             <Link
               key={webinar.id}
               to={`/webinars/${webinar.id}`}
-              className={`bg-background p-6 md:p-8 group hover:bg-card transition-colors animate-fade-up stagger-${index + 1}`}
+              className={`glass-card p-6 group hover:border-primary/20 transition-all animate-fade-up stagger-${index + 1}`}
             >
               {/* Domain */}
-              <p className="text-xs text-muted-foreground uppercase tracking-wider mb-4">
+              <p className="text-xs text-primary uppercase tracking-wider mb-4">
                 {webinar.domainLabel}
               </p>
 
@@ -50,9 +52,15 @@ export function UpcomingWebinars() {
 
               {/* Meta */}
               <div className="flex items-center justify-between text-sm">
-                <span className="text-muted-foreground">{webinar.date}</span>
+                <span className="flex items-center gap-1.5 text-muted-foreground">
+                  <Calendar className="w-3.5 h-3.5" />
+                  {webinar.date}
+                </span>
                 {webinar.spotsLeft && (
-                  <span className="text-primary">{webinar.spotsLeft} spots</span>
+                  <span className="flex items-center gap-1.5 text-primary">
+                    <Users className="w-3.5 h-3.5" />
+                    {webinar.spotsLeft} spots
+                  </span>
                 )}
               </div>
             </Link>

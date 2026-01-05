@@ -16,9 +16,9 @@ export function Navbar() {
   const location = useLocation();
 
   return (
-    <header className="sticky top-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
+    <header className="sticky top-0 z-50 glass-surface border-b border-[hsl(var(--glass-border))]">
       <nav className="container-wide">
-        <div className="flex items-center justify-between h-14">
+        <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <Link 
             to="/" 
@@ -49,9 +49,9 @@ export function Navbar() {
           <div className="hidden md:block">
             <Link 
               to="/webinars"
-              className="text-sm text-primary hover:opacity-80 transition-opacity"
+              className="btn-primary"
             >
-              Explore Webinars →
+              Explore Webinars
             </Link>
           </div>
 
@@ -68,7 +68,7 @@ export function Navbar() {
 
       {/* Mobile Navigation */}
       {isOpen && (
-        <div className="md:hidden border-t border-border bg-background">
+        <div className="md:hidden border-t border-[hsl(var(--glass-border))] glass-surface">
           <div className="container-wide py-4 space-y-1">
             {navLinks.map((link) => (
               <Link
@@ -90,7 +90,7 @@ export function Navbar() {
               onClick={() => setIsOpen(false)}
               className="block py-2 text-sm text-primary"
             >
-              Explore Webinars →
+              Explore Webinars
             </Link>
           </div>
         </div>

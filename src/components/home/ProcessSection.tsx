@@ -1,17 +1,22 @@
+import { BookOpen, Zap, BarChart3 } from "lucide-react";
+
 const steps = [
   {
+    icon: BookOpen,
     number: "01",
     title: "Learn",
     description:
       "Engage with focused, practical content designed by industry practitioners. No filler, just what you need to know.",
   },
   {
+    icon: Zap,
     number: "02",
     title: "Apply",
     description:
       "Put your learning into practice immediately with guided exercises, real projects, and hands-on implementation.",
   },
   {
+    icon: BarChart3,
     number: "03",
     title: "Measure",
     description:
@@ -21,7 +26,7 @@ const steps = [
 
 export function ProcessSection() {
   return (
-    <section className="py-20 md:py-28 bg-card">
+    <section className="py-20 md:py-28 glass-surface">
       <div className="container-wide">
         {/* Header */}
         <div className="max-w-xl mb-16">
@@ -34,16 +39,21 @@ export function ProcessSection() {
         </div>
 
         {/* Steps */}
-        <div className="grid md:grid-cols-3 gap-8 md:gap-12">
+        <div className="grid md:grid-cols-3 gap-6">
           {steps.map((step, index) => (
             <div 
               key={step.number}
-              className={`relative animate-fade-up stagger-${index + 1}`}
+              className={`relative glass-card p-6 animate-fade-up stagger-${index + 1}`}
             >
-              {/* Number */}
-              <span className="text-xs text-muted-foreground mb-4 block">
-                {step.number}
-              </span>
+              {/* Number badge */}
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
+                  <step.icon className="w-5 h-5 text-primary" />
+                </div>
+                <span className="text-xs text-muted-foreground">
+                  {step.number}
+                </span>
+              </div>
               
               {/* Content */}
               <h3 className="text-base font-medium mb-3 text-foreground">{step.title}</h3>
