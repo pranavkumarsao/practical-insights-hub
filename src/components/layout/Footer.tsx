@@ -21,7 +21,7 @@ export function Footer() {
           {/* Brand */}
           <div className="col-span-2">
             <Link to="/" className="inline-block mb-4">
-              <img src={logo} alt="The Practical World" className="h-8" />
+              <img src={logo} alt="The Practical World" className="h-12" />
             </Link>
             <p className="text-sm text-muted-foreground max-w-xs leading-relaxed">
               Real-world learning with practical implementation and measurable outcomes.
