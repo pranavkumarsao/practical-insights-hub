@@ -24,7 +24,7 @@ export function Navbar() {
             to="/" 
             className="flex items-center"
           >
-            <img src={logo} alt="The Practical World" className="h-15" />
+            <img src={logo} alt="The Practical World" className="h-8" />
           </Link>
 
           {/* Desktop Navigation */}
