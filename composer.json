@@ -1,0 +1,9 @@
+{
+  "name": "pranavkumarsao/practical-insights-hub",
+  "description": "Placeholder composer.json to satisfy deployment checks for a non-PHP project.",
+  "type": "project",
+  "require": {
+    "php": ">=8.0"
+  },
+  "license": "MIT"
+}
