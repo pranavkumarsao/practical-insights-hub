@@ -60,11 +60,18 @@ export default {
         surface: {
           elevated: "hsl(var(--surface-elevated))",
         },
+        glass: {
+          bg: "hsl(var(--glass-bg))",
+          border: "hsl(var(--glass-border))",
+        },
       },
       borderRadius: {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
+      },
+      backdropBlur: {
+        glass: "var(--glass-blur)",
       },
       keyframes: {
         "accordion-down": {

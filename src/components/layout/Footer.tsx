@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import logo from "@/assets/logo.svg";
 
 const footerLinks = {
   product: [
@@ -14,15 +15,15 @@ const footerLinks = {
 
 export function Footer() {
   return (
-    <footer className="border-t border-border">
+    <footer className="border-t border-[hsl(var(--glass-border))]">
       <div className="container-wide py-16 md:py-20">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-12">
           {/* Brand */}
           <div className="col-span-2">
-            <Link to="/" className="text-sm font-medium text-foreground">
-              The Practical World
+            <Link to="/" className="inline-block mb-4">
+              <img src={logo} alt="The Practical World" className="h-8" />
             </Link>
-            <p className="mt-4 text-sm text-muted-foreground max-w-xs leading-relaxed">
+            <p className="text-sm text-muted-foreground max-w-xs leading-relaxed">
               Real-world learning with practical implementation and measurable outcomes.
             </p>
           </div>
@@ -63,7 +64,7 @@ export function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="mt-16 pt-8 border-t border-border">
+        <div className="mt-16 pt-8 border-t border-[hsl(var(--glass-border))]">
           <p className="text-sm text-muted-foreground">
             © {new Date().getFullYear()} The Practical World
           </p>

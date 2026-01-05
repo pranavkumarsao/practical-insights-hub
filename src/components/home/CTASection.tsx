@@ -1,8 +1,9 @@
 import { Link } from "react-router-dom";
+import { ArrowRight } from "lucide-react";
 
 export function CTASection() {
   return (
-    <section className="py-20 md:py-28 border-t border-border">
+    <section className="py-20 md:py-28 border-t border-[hsl(var(--glass-border))]">
       <div className="container-tight text-center">
         <h2 className="heading-section mb-4">
           Ready to learn practically?
@@ -13,9 +14,10 @@ export function CTASection() {
         </p>
         <Link 
           to="/webinars"
-          className="inline-flex items-center justify-center px-5 py-2.5 bg-primary text-primary-foreground text-sm font-medium rounded-lg hover:opacity-90 transition-opacity"
+          className="btn-primary"
         >
           Explore Webinars
+          <ArrowRight className="w-4 h-4" />
         </Link>
       </div>
     </section>

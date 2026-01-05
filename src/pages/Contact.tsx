@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { ChevronDown } from "lucide-react";
+import { ChevronDown, Send, Mail } from "lucide-react";
 import { Layout } from "@/components/layout/Layout";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -78,7 +78,7 @@ const Contact = () => {
                       id="name" 
                       required 
                       placeholder="Your name" 
-                      className="h-10 bg-card border-border focus:border-primary/50 transition-colors" 
+                      className="h-11 bg-[hsl(var(--glass-bg))] border-[hsl(var(--glass-border))] focus:border-primary/50 transition-colors backdrop-blur-sm" 
                     />
                   </div>
                   <div className="space-y-2">
@@ -88,7 +88,7 @@ const Contact = () => {
                       type="email" 
                       required 
                       placeholder="you@example.com" 
-                      className="h-10 bg-card border-border focus:border-primary/50 transition-colors" 
+                      className="h-11 bg-[hsl(var(--glass-bg))] border-[hsl(var(--glass-border))] focus:border-primary/50 transition-colors backdrop-blur-sm" 
                     />
                   </div>
                 </div>
@@ -99,7 +99,7 @@ const Contact = () => {
                     id="subject" 
                     required 
                     placeholder="What's this about?" 
-                    className="h-10 bg-card border-border focus:border-primary/50 transition-colors" 
+                    className="h-11 bg-[hsl(var(--glass-bg))] border-[hsl(var(--glass-border))] focus:border-primary/50 transition-colors backdrop-blur-sm" 
                   />
                 </div>
                 
@@ -109,27 +109,29 @@ const Contact = () => {
                     id="message" 
                     required 
                     placeholder="Tell us more..."
-                    className="min-h-[120px] resize-none bg-card border-border focus:border-primary/50 transition-colors"
+                    className="min-h-[120px] resize-none bg-[hsl(var(--glass-bg))] border-[hsl(var(--glass-border))] focus:border-primary/50 transition-colors backdrop-blur-sm"
                   />
                 </div>
                 
                 <button 
                   type="submit" 
                   disabled={isSubmitting}
-                  className="px-5 py-2.5 bg-primary text-primary-foreground text-sm font-medium rounded-lg hover:opacity-90 transition-opacity disabled:opacity-50"
+                  className="btn-primary disabled:opacity-50"
                 >
                   {isSubmitting ? "Sending..." : "Send Message"}
+                  <Send className="w-4 h-4" />
                 </button>
               </form>
 
-              <div className="mt-10 pt-8 border-t border-border">
-                <p className="text-sm text-muted-foreground mb-2">
+              <div className="mt-10 pt-8 border-t border-[hsl(var(--glass-border))]">
+                <p className="text-sm text-muted-foreground mb-3">
                   Prefer email?
                 </p>
                 <a 
                   href="mailto:hello@thepracticalworld.com"
-                  className="text-sm text-primary hover:opacity-80 transition-opacity"
+                  className="btn-link"
                 >
+                  <Mail className="w-4 h-4" />
                   hello@thepracticalworld.com
                 </a>
               </div>
@@ -143,11 +145,11 @@ const Contact = () => {
                 {faqs.map((faq, index) => (
                   <div 
                     key={index}
-                    className="bg-card border border-border rounded-lg overflow-hidden"
+                    className="glass-card overflow-hidden"
                   >
                     <button
                       onClick={() => setOpenFaq(openFaq === index ? null : index)}
-                      className="w-full flex items-center justify-between p-4 text-left hover:bg-muted/50 transition-colors"
+                      className="w-full flex items-center justify-between p-4 text-left hover:bg-[hsl(var(--glass-bg))] transition-colors"
                     >
                       <span className="text-sm font-medium text-foreground pr-4">{faq.question}</span>
                       <ChevronDown className={cn(
