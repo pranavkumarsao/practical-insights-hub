@@ -10,13 +10,13 @@ const milestones = [
     active: true,
   },
   {
-    phase: "Q2 2025",
+    phase: "Q2 2026",
     title: "Learning Platform Beta",
     description: "Video courses, readable guides, and audio content. Multiple formats for different preferences.",
     active: false,
   },
   {
-    phase: "Q3 2025",
+    phase: "Q3 2026",
     title: "Full Platform Launch",
     description: "Complete learning ecosystem with community features and personalized learning paths.",
     active: false,
