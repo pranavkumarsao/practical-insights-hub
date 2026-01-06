@@ -89,7 +89,7 @@ const About = () => {
       </section>
 
       {/* Story */}
-      <section className="py-16 md:py-20 glass-surface">
+      <section className="py-16 md:py-20">
         <div className="container-wide">
           <div className="max-w-2xl mx-auto">
             <h2 className="heading-section mb-8 text-center">

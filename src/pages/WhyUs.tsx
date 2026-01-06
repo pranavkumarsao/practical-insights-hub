@@ -107,7 +107,7 @@ const WhyUs = () => {
       </section>
 
       {/* Values */}
-      <section className="py-16 md:py-24 glass-surface">
+      <section className="py-16 md:py-24">
         <div className="container-wide">
           <div className="text-center max-w-2xl mx-auto mb-16">
             <h2 className="heading-section mb-4">
