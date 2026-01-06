@@ -14,11 +14,24 @@ export default {
     },
     extend: {
       fontFamily: {
-        sans: ['Inter', '-apple-system', 'BlinkMacSystemFont', 'system-ui', 'sans-serif'],
+        sans: [
+          'Inter',
+          'ui-sans-serif',
+          'system-ui',
+          'sans-serif',
+          'Apple Color Emoji',
+          'Segoe UI Emoji',
+          'Segoe UI Symbol',
+          'Noto Color Emoji',
+        ],
       },
       fontWeight: {
         normal: '400',
         medium: '500',
+      },
+      letterSpacing: {
+        'tight-heading': '-0.02em',
+        'tight-body': '-0.01em',
       },
       colors: {
         border: "hsl(var(--border))",
