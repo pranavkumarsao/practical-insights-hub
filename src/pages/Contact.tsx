@@ -9,8 +9,8 @@ import { cn } from "@/lib/utils";
 
 const faqs = [
   {
-    question: "Are webinars free?",
-    answer: "Yes, all our live webinars are currently free. We believe in demonstrating value before asking for anything in return.",
+    question: "How do webinars work?",
+    answer: "Our webinars are live, interactive sessions led by industry practitioners. You'll learn practical skills and get direct access to Q&A with the instructor.",
   },
   {
     question: "Will sessions be recorded?",

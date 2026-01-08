@@ -41,7 +41,7 @@ export function HeroSection() {
               to="/webinars"
               className="btn-primary text-base px-8 py-4"
             >
-              Explore Free Webinars
+              Explore Webinars
               <ArrowRight className="w-4 h-4" />
             </Link>
             <Link 
@@ -67,8 +67,8 @@ export function HeroSection() {
                     <p className="text-sm text-muted-foreground">Practical Focus</p>
                   </div>
                   <div className="text-center">
-                    <p className="text-3xl md:text-4xl font-medium text-primary mb-1">Free</p>
-                    <p className="text-sm text-muted-foreground">All Sessions</p>
+                    <p className="text-3xl md:text-4xl font-medium text-primary mb-1">Live</p>
+                    <p className="text-sm text-muted-foreground">Interactive Q&A</p>
                   </div>
                   <div className="text-center">
                     <p className="text-3xl md:text-4xl font-medium text-foreground mb-1">90+</p>
