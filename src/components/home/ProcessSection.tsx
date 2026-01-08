@@ -26,7 +26,7 @@ const steps = [
 
 export function ProcessSection() {
   return (
-    <section className="py-20 md:py-28 glass-surface">
+    <section className="py-20 md:py-28">
       <div className="container-wide">
         {/* Header */}
         <div className="max-w-xl mb-16">

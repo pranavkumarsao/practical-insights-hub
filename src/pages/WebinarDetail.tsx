@@ -112,8 +112,8 @@ const WebinarDetail = () => {
                     <span className="text-foreground">Included</span>
                   </div>
                   <div className="flex items-center justify-between text-sm">
-                    <span className="text-muted-foreground">Price</span>
-                    <span className="text-primary font-medium">Free</span>
+                    <span className="text-muted-foreground">Access</span>
+                    <span className="text-primary font-medium">Limited Seats</span>
                   </div>
                 </div>
 
@@ -121,7 +121,7 @@ const WebinarDetail = () => {
                 {webinar.status === "upcoming" ? (
                   <>
                     <button className="btn-primary w-full mb-3">
-                      Register for Free
+                      Register Now
                     </button>
                     {webinar.spotsLeft && (
                       <p className="flex items-center justify-center gap-1.5 text-xs text-muted-foreground">
@@ -264,7 +264,7 @@ const WebinarDetail = () => {
             </p>
             {webinar.status === "upcoming" ? (
               <button className="btn-primary">
-                Register for Free
+                Register Now
               </button>
             ) : webinar.status === "live" ? (
               <button className="btn-primary bg-destructive hover:bg-destructive/90">
