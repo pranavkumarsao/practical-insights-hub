@@ -46,8 +46,8 @@ const socialLinks = [
 export function Footer() {
   return (
     <footer className="border-t border-[hsl(var(--glass-border))]">
-      <div className="container-wide py-16 md:py-20">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-12">
+      <div className="container-wide py-12 md:py-16">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12">
           {/* Brand */}
           <div className="col-span-2">
             <Link to="/" className="inline-block mb-4">
@@ -109,7 +109,7 @@ export function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="mt-16 pt-8 border-t border-[hsl(var(--glass-border))] flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div className="mt-10 md:mt-12 pt-6 md:pt-8 border-t border-[hsl(var(--glass-border))] flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-sm text-muted-foreground">
             © {new Date().getFullYear()} The Practical World
           </p>

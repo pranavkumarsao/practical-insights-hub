@@ -24,10 +24,10 @@ const Webinars = () => {
   return (
     <Layout>
       {/* Header */}
-      <section className="py-16 md:py-24">
+      <section className="py-16 md:py-20">
         <div className="container-wide">
           <div className="max-w-xl">
-            <h1 className="heading-display mb-4 animate-fade-up">
+            <h1 className="heading-display mb-6 animate-fade-up">
               Webinars
             </h1>
             <p className="text-body-large animate-fade-up stagger-1">

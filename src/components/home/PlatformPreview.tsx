@@ -11,7 +11,7 @@ export function PlatformPreview() {
   return (
     <section className="py-20 md:py-28 border-t border-[hsl(var(--glass-border))]">
       <div className="container-wide">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-20">
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Content */}
           <div className="max-w-md">
             <p className="text-xs text-primary uppercase tracking-wider mb-4">

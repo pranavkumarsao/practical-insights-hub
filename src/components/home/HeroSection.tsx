@@ -3,7 +3,7 @@ import { ArrowRight, Sparkles } from "lucide-react";
 
 export function HeroSection() {
   return (
-    <section className="relative py-20 md:py-28 lg:py-36 overflow-hidden">
+    <section className="relative py-20 md:py-32 lg:py-40 overflow-hidden">
       {/* Subtle gradient orbs for depth */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-primary/5 rounded-full blur-[120px]" />
