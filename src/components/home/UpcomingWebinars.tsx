@@ -9,7 +9,7 @@ export function UpcomingWebinars() {
     <section className="py-20 md:py-28 border-t border-[hsl(var(--glass-border))]">
       <div className="container-wide">
         {/* Header */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-12">
+        <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-10 md:mb-12">
           <div>
             <h2 className="heading-section mb-2">
               Upcoming webinars
@@ -28,7 +28,7 @@ export function UpcomingWebinars() {
         </div>
 
         {/* Grid */}
-        <div className="grid md:grid-cols-3 gap-4">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
           {upcomingWebinars.map((webinar, index) => (
             <Link
               key={webinar.id}

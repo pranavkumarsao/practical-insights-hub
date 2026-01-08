@@ -26,7 +26,7 @@ export function WhySection() {
     <section className="py-20 md:py-28 border-t border-[hsl(var(--glass-border))]">
       <div className="container-wide">
         {/* Header */}
-        <div className="max-w-xl mb-16">
+        <div className="max-w-xl mb-12 md:mb-16">
           <h2 className="heading-section mb-4">
             Learning that actually sticks
           </h2>

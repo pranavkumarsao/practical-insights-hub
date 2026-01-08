@@ -52,7 +52,7 @@ const WhyUs = () => {
   return (
     <Layout>
       {/* Hero */}
-      <section className="py-16 md:py-24">
+      <section className="py-16 md:py-20">
         <div className="container-wide">
           <div className="max-w-3xl">
             <h1 className="heading-display mb-6 animate-fade-up">
@@ -67,9 +67,9 @@ const WhyUs = () => {
       </section>
 
       {/* Comparison */}
-      <section className="py-16 md:py-24 border-t border-[hsl(var(--glass-border))]">
+      <section className="py-16 md:py-20 border-t border-[hsl(var(--glass-border))]">
         <div className="container-wide">
-          <h2 className="heading-section mb-12 text-center">
+          <h2 className="heading-section mb-10 md:mb-12 text-center">
             Traditional Ed-Tech vs. Practical World
           </h2>
           
@@ -107,9 +107,9 @@ const WhyUs = () => {
       </section>
 
       {/* Values */}
-      <section className="py-16 md:py-24">
+      <section className="py-16 md:py-20 border-t border-[hsl(var(--glass-border))]">
         <div className="container-wide">
-          <div className="text-center max-w-2xl mx-auto mb-16">
+          <div className="text-center max-w-2xl mx-auto mb-10 md:mb-12">
             <h2 className="heading-section mb-4">
               Our learning philosophy
             </h2>
@@ -138,7 +138,7 @@ const WhyUs = () => {
       </section>
 
       {/* CTA */}
-      <section className="py-16 md:py-24 border-t border-[hsl(var(--glass-border))]">
+      <section className="py-16 md:py-20 border-t border-[hsl(var(--glass-border))]">
         <div className="container-tight text-center">
           <h2 className="heading-section mb-4">
             Experience the difference

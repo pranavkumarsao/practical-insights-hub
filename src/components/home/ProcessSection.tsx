@@ -26,10 +26,10 @@ const steps = [
 
 export function ProcessSection() {
   return (
-    <section className="py-20 md:py-28">
+    <section className="py-20 md:py-28 border-t border-[hsl(var(--glass-border))]">
       <div className="container-wide">
         {/* Header */}
-        <div className="max-w-xl mb-16">
+        <div className="max-w-xl mb-12 md:mb-16">
           <h2 className="heading-section mb-4">
             How learning works here
           </h2>

@@ -25,18 +25,18 @@ const WebinarDetail = () => {
   return (
     <Layout>
       {/* Hero Header */}
-      <section className="py-12 md:py-20">
+      <section className="py-16 md:py-20">
         <div className="container-wide">
           {/* Back link */}
           <Link 
             to="/webinars"
-            className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors mb-10"
+            className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors mb-8"
           >
             <ArrowLeft className="w-4 h-4" />
             All webinars
           </Link>
 
-          <div className="grid lg:grid-cols-3 gap-12 lg:gap-16">
+          <div className="grid lg:grid-cols-3 gap-10 lg:gap-12">
             {/* Main content */}
             <div className="lg:col-span-2">
               {/* Meta */}
@@ -152,10 +152,10 @@ const WebinarDetail = () => {
       </section>
 
       {/* Content sections */}
-      <section className="pb-20 md:pb-28">
+      <section className="pb-20 md:pb-28 border-t border-[hsl(var(--glass-border))] pt-16 md:pt-20">
         <div className="container-wide">
-          <div className="grid lg:grid-cols-3 gap-12 lg:gap-16">
-            <div className="lg:col-span-2 space-y-16">
+          <div className="grid lg:grid-cols-3 gap-10 lg:gap-12">
+            <div className="lg:col-span-2 space-y-12 md:space-y-16">
               {/* Who this is for */}
               <div className="animate-fade-up">
                 <div className="flex items-center gap-3 mb-6">

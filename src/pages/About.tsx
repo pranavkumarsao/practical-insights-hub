@@ -27,7 +27,7 @@ const About = () => {
   return (
     <Layout>
       {/* Hero */}
-      <section className="py-16 md:py-24">
+      <section className="py-16 md:py-20">
         <div className="container-wide">
           <div className="max-w-2xl">
             <h1 className="heading-display mb-6 animate-fade-up">
@@ -44,7 +44,7 @@ const About = () => {
       {/* Mission */}
       <section className="py-16 md:py-20 border-t border-[hsl(var(--glass-border))]">
         <div className="container-wide">
-          <div className="grid lg:grid-cols-2 gap-12 lg:gap-20">
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16">
             <div className="animate-fade-up">
               <h2 className="heading-section mb-6">
                 Our mission
@@ -89,10 +89,10 @@ const About = () => {
       </section>
 
       {/* Story */}
-      <section className="py-16 md:py-20">
+      <section className="py-16 md:py-20 border-t border-[hsl(var(--glass-border))]">
         <div className="container-wide">
-          <div className="max-w-2xl mx-auto">
-            <h2 className="heading-section mb-8 text-center">
+          <div className="max-w-2xl mx-auto text-center">
+            <h2 className="heading-section mb-8">
               Why we're building this
             </h2>
             <div className="space-y-4 text-body">
@@ -122,7 +122,7 @@ const About = () => {
       {/* Roadmap */}
       <section className="py-16 md:py-20 border-t border-[hsl(var(--glass-border))]">
         <div className="container-wide">
-          <div className="max-w-xl mb-12">
+          <div className="max-w-xl mb-10 md:mb-12">
             <h2 className="heading-section mb-4">
               What's ahead
             </h2>

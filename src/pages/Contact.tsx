@@ -79,10 +79,10 @@ const Contact = () => {
   return (
     <Layout>
       {/* Header */}
-      <section className="py-16 md:py-24">
+      <section className="py-16 md:py-20">
         <div className="container-wide">
           <div className="max-w-xl">
-            <h1 className="heading-display mb-4 animate-fade-up">
+            <h1 className="heading-display mb-6 animate-fade-up">
               Contact
             </h1>
             <p className="text-body-large animate-fade-up stagger-1">
@@ -93,9 +93,9 @@ const Contact = () => {
       </section>
 
       {/* Contact & FAQ */}
-      <section className="pb-20 md:pb-28">
+      <section className="pb-20 md:pb-28 border-t border-[hsl(var(--glass-border))] pt-16 md:pt-20">
         <div className="container-wide">
-          <div className="grid lg:grid-cols-2 gap-16 lg:gap-20">
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16">
             {/* Contact Form */}
             <div className="animate-fade-up">
               <h2 className="text-base font-medium mb-6 text-foreground">Send a message</h2>
