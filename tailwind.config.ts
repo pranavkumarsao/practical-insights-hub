@@ -24,13 +24,20 @@ export default {
           'Segoe UI Symbol',
           'Noto Color Emoji',
         ],
+        display: [
+          'InterDisplay',
+          'Inter',
+          'ui-sans-serif',
+          'system-ui',
+          'sans-serif',
+        ],
       },
       fontWeight: {
         normal: '400',
         medium: '500',
       },
       letterSpacing: {
-        'tight-heading': '-0.02em',
+        'tight-heading': '-0.01em',
         'tight-body': '-0.01em',
       },
       colors: {

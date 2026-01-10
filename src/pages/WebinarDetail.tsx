@@ -12,7 +12,7 @@ const WebinarDetail = () => {
     return (
       <Layout>
         <div className="container-wide py-20 text-center">
-          <h1 className="text-lg font-medium mb-4">Webinar not found</h1>
+          <h1 className="text-lg font-normal mb-4">Webinar not found</h1>
           <Link to="/webinars" className="btn-link">
             <ArrowLeft className="w-4 h-4" />
             Back to webinars
@@ -162,7 +162,7 @@ const WebinarDetail = () => {
                   <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
                     <Target className="w-5 h-5 text-primary" />
                   </div>
-                  <h2 className="text-lg font-medium text-foreground">Who this is for</h2>
+                  <h2 className="text-lg font-normal text-foreground">Who this is for</h2>
                 </div>
                 <ul className="space-y-3">
                   {webinar.targetAudience.map((audience) => (
@@ -182,7 +182,7 @@ const WebinarDetail = () => {
                   <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
                     <Award className="w-5 h-5 text-primary" />
                   </div>
-                  <h2 className="text-lg font-medium text-foreground">What you'll learn</h2>
+                  <h2 className="text-lg font-normal text-foreground">What you'll learn</h2>
                 </div>
                 <div className="grid sm:grid-cols-2 gap-3">
                   {webinar.outcomes.map((outcome, index) => (
@@ -203,7 +203,7 @@ const WebinarDetail = () => {
                   <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
                     <BookOpen className="w-5 h-5 text-primary" />
                   </div>
-                  <h2 className="text-lg font-medium text-foreground">Session agenda</h2>
+                  <h2 className="text-lg font-normal text-foreground">Session agenda</h2>
                 </div>
                 <div className="glass-card overflow-hidden">
                   {webinar.agenda.map((item, index) => (
@@ -229,7 +229,7 @@ const WebinarDetail = () => {
                   <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
                     <MessageCircle className="w-5 h-5 text-primary" />
                   </div>
-                  <h2 className="text-lg font-medium text-foreground">What to expect</h2>
+                  <h2 className="text-lg font-normal text-foreground">What to expect</h2>
                 </div>
                 <div className="grid sm:grid-cols-3 gap-3">
                   <div className="glass-card p-4 text-center">

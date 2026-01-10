@@ -56,7 +56,7 @@ export function ProcessSection() {
               </div>
               
               {/* Content */}
-              <h3 className="text-base font-medium mb-3 text-foreground">{step.title}</h3>
+              <h3 className="text-base font-normal mb-3 text-foreground">{step.title}</h3>
               <p className="text-sm text-muted-foreground leading-relaxed">
                 {step.description}
               </p>

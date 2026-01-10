@@ -67,7 +67,7 @@ const About = () => {
                 <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center mb-4">
                   <Lightbulb className="w-5 h-5 text-primary" />
                 </div>
-                <h3 className="text-base font-medium mb-2 text-foreground">Vision</h3>
+                <h3 className="text-base font-normal mb-2 text-foreground">Vision</h3>
                 <p className="text-sm text-muted-foreground leading-relaxed">
                   A world where learning is synonymous with doing. Where every hour invested 
                   translates directly to professional capability.
@@ -77,7 +77,7 @@ const About = () => {
                 <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center mb-4">
                   <Users className="w-5 h-5 text-primary" />
                 </div>
-                <h3 className="text-base font-medium mb-2 text-foreground">Community</h3>
+                <h3 className="text-base font-normal mb-2 text-foreground">Community</h3>
                 <p className="text-sm text-muted-foreground leading-relaxed">
                   We're building a community of practitioners who learn by doing, share 
                   what works, and help each other grow.
@@ -141,7 +141,7 @@ const About = () => {
                   <span className={`text-xs ${milestone.active ? 'text-primary' : 'text-muted-foreground'}`}>
                     {milestone.phase}
                   </span>
-                  <h3 className="text-base font-medium mt-1 mb-2 text-foreground">{milestone.title}</h3>
+                  <h3 className="text-base font-normal mt-1 mb-2 text-foreground">{milestone.title}</h3>
                   <p className="text-sm text-muted-foreground">{milestone.description}</p>
                 </div>
               ))}

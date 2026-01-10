@@ -46,7 +46,7 @@ export function WhySection() {
               <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center mb-4">
                 <feature.icon className="w-5 h-5 text-primary" />
               </div>
-              <h3 className="text-base font-medium mb-3 text-foreground">{feature.title}</h3>
+              <h3 className="text-base font-normal mb-3 text-foreground">{feature.title}</h3>
               <p className="text-sm text-muted-foreground leading-relaxed">
                 {feature.description}
               </p>

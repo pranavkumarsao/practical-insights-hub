@@ -75,7 +75,7 @@ export function Footer() {
 
           {/* Product Links */}
           <div>
-            <h4 className="text-sm font-medium text-foreground mb-4">Product</h4>
+            <h4 className="text-sm font-normal text-foreground mb-4">Product</h4>
             <ul className="space-y-3">
               {footerLinks.product.map((link) => (
                 <li key={link.label}>
@@ -92,7 +92,7 @@ export function Footer() {
 
           {/* Support Links */}
           <div>
-            <h4 className="text-sm font-medium text-foreground mb-4">Support</h4>
+            <h4 className="text-sm font-normal text-foreground mb-4">Support</h4>
             <ul className="space-y-3">
               {footerLinks.support.map((link) => (
                 <li key={link.label}>

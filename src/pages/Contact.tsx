@@ -98,7 +98,7 @@ const Contact = () => {
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16">
             {/* Contact Form */}
             <div className="animate-fade-up">
-              <h2 className="text-base font-medium mb-6 text-foreground">Send a message</h2>
+              <h2 className="text-base font-normal mb-6 text-foreground">Send a message</h2>
               
               <form onSubmit={handleSubmit} className="space-y-5">
                 <div className="grid sm:grid-cols-2 gap-4">
@@ -191,7 +191,7 @@ const Contact = () => {
 
             {/* FAQ */}
             <div className="animate-fade-up stagger-2">
-              <h2 className="text-base font-medium mb-6 text-foreground">Frequently asked</h2>
+              <h2 className="text-base font-normal mb-6 text-foreground">Frequently asked</h2>
 
               <div className="space-y-2">
                 {faqs.map((faq, index) => (
