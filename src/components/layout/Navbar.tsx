@@ -46,8 +46,14 @@ export function Navbar() {
           </div>
 
           {/* Desktop CTA */}
-          <div className="hidden md:block">
-            <Link 
+          <div className="hidden md:flex items-center gap-6">
+            <a
+              href="/login"
+              className="text-sm text-muted-foreground hover:text-foreground transition-colors underline underline-offset-4"
+            >
+              Login
+            </a>
+            <Link
               to="/webinars"
               className="btn-primary"
             >
@@ -85,8 +91,15 @@ export function Navbar() {
                 {link.label}
               </Link>
             ))}
-            <Link 
-              to="/webinars" 
+            <a
+              href="/login"
+              onClick={() => setIsOpen(false)}
+              className="block py-2 text-sm text-muted-foreground underline underline-offset-4"
+            >
+              Login
+            </a>
+            <Link
+              to="/webinars"
               onClick={() => setIsOpen(false)}
               className="block py-2 text-sm text-primary"
             >
